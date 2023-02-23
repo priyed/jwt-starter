@@ -3,7 +3,6 @@ const jwt = require("jsonwebtoken");
 
 const login = async (req, res) => {
   const { username, password } = req.body;
-  console.log();
   // mongo
   // Joi
   // check in the controller
@@ -21,7 +20,6 @@ const login = async (req, res) => {
 };
 
 const dashboard = async (req, res) => {
-  console.log(req.user);
   const lucky_number = Math.floor(Math.random() * 100);
   res.status(200).json({
     message: `Hello, ${req.user.username}`,
